@@ -1,2 +1,4 @@
 ---
 # vars file for rust
+
+rust_download_dir: /root

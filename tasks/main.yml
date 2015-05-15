@@ -1,2 +1,34 @@
 ---
 # tasks file for rust
+
+- name: Include distribution specific variables
+  include_vars: "{{ ansible_distribution }}.yml"
+  tags: rust
+
+- include: CentOS.yml
+  when: ansible_distribution == "CentOS"
+  tags: rust
+
+- include: Ubuntu.yml
+  when: ansible_distribution == "Ubuntu"
+  tags: rust
+
+- name: Download Rust
+  get_url: >
+    url=http://static.rust-lang.org/dist/rust-{{ rust_version }}-x86_64-unknown-linux-gnu.tar.gz
+    dest={{ rust_download_dir }}/rust-{{ rust_version }}-x86_64-unknown-linux-gnu.tar.gz
+    sha256sum={{ rust_sha256sum }}
+  tags: rust
+
+- name: Uncompress Rust archive
+  unarchive: >
+    src={{ rust_download_dir }}/rust-{{ rust_version }}-x86_64-unknown-linux-gnu.tar.gz
+    dest={{ rust_download_dir }}
+    copy=no
+  tags: rust
+
+- name: Install Rust
+  command: "{{ rust_download_dir }}/rust-{{ rust_version }}-x86_64-unknown-linux-gnu/install.sh"
+  args:
+    creates: /usr/local/lib/rustlib/uninstall.sh
+  tags: rust

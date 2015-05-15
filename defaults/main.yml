@@ -1,2 +1,5 @@
 ---
 # defaults file for rust
+
+rust_version: 1.0.0
+rust_sha256sum: aab0d853314675d5e80e427c613a0e646ae75fbbc856b886dab682280f825d53
