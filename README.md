@@ -1,6 +1,8 @@
 rust
 ====
 
+[![Ansible Galaxy](https://img.shields.io/badge/galaxy-kbrebanov.rust-660198.svg)](https://galaxy.ansible.com/list#/roles/3944)
+
 Installs Rust
 
 Requirements
