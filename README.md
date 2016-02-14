@@ -1,7 +1,7 @@
 rust
 ====
 
-[![Ansible Role](https://img.shields.io/ansible/role/3944.svg)](https://galaxy.ansible.com/list#/roles/3944)
+[![Build Status](https://travis-ci.org/kbrebanov/ansible-rust.svg?branch=master)](https://travis-ci.org/kbrebanov/ansible-rust)
 
 Installs Rust
 
