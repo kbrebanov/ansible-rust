@@ -14,9 +14,9 @@ Role Variables
 --------------
 
 | Name           | Default                                                          | Description                 |
-|----------------|------------------------------------------------------------------|-----------------------------|
-| rust_version   | 1.6.0                                                            | Version of Rust to install  |
-| rust_sha256sum | 8630cc02432b4423d64eeae4ef071ec58e5dd1f3d555a3a3cc34b759202813f6 | SHA 256 checksum of package |
+|:---------------|:-----------------------------------------------------------------|:----------------------------|
+| rust_version   | 1.8.0                                                            | Version of Rust to install  |
+| rust_sha256sum | d5a7c10070f8053defe07d1704762c91e94fc30a1020d16b111d63e9af365d48 | SHA 256 checksum of package |
 
 Dependencies
 ------------
